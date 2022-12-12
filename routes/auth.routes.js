@@ -4,6 +4,8 @@ const UserModel = require("../models/User")
 const authRouter = Router();
 
 authRouter.post("/signup", async (req, res) => {
+
+    
     console.log(req.body)
     const user = await new UserModel(req.body)
     user.save((err, success) => {
